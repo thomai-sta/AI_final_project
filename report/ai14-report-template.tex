@@ -1,0 +1,281 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+
+\graphicspath{{pictures/}}
+
+\title{Supernova: NLG for wardrobe tips depending on weather}
+\author{\hspace*{-0.5cm}\begin{tabular}{cc}
+Omar Elshenawy & Mohamed Abdulziz \\ 
+09/10/1990 & 31/07/1985 \\ 
+omares@kth.se & moaah@kth.se \\
+\includegraphics[width=0.13\linewidth]{Omar} & 
+\includegraphics[width=0.13\linewidth]{Mohamed} \\
+ Thomai Stathopoulou & Varsha Kirani Gopinath\\ 10/10/1987 & 04/06/1991 \\ thomai@kth.se & varsha@kth.se \\ 
+\includegraphics[width=0.13\linewidth]{Thomai} & 
+\includegraphics[width=0.13\linewidth]{Varsha}
+\end{tabular}} 
+% Normally there will not be any pictures but we want
+% these so that we can connect faces to names in the course
+% We also want birthdates so that we can tell people with the same
+% name apart
+\date{}
+
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{}
+\lhead{DD2380 ai14}
+\rhead{O. Elshenawy, T. Stathopoulou, M. Abdulziz, V. Kirani} %% UPDATE WITH YOUR NAMES
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{abstract}
+We create an application that provides the user with tips on what to wear depending on weather conditions. A sample output of the application would be ``Today is rainy, don't forget your umbrella'', or if the weather is windy, ``Today is rainy and windy, wear a rain jacket''. We attempt to build this application using a natural language generation system that would generate appropriate text according to the changing weather condition. We build the system using 3 NLG methods that come from 2 different trends in the NLG field, and we assess their performance for our application.
+\end{abstract}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+Natural language generation is an important subtask of many applications that rely on human computer interaction. While as the Chinese proverb says, a picture is worth a thousand words, there are a lot of situations where pictures, schematic diagrams, maps, charts and plots cannot communicate information as effectively and efficiently as text would. There are no rules for when graphics is better than text, however, by means of observation, an annotated picture would better describe a physical location, charts can show progress, schematic diagrams can describe flow and hierarchy, but would all fail at describing abstract concepts such as causality, advice (that is why for instance the Internet phenomenon ``AdviceAnimals'' \cite{Reddit} memes are pictures with text overlaid), or even, what this paragraph attempts to describe, which are all straightforward to describe in text. Another issue on which the type of representation might depend is the expertise of the user, although graphical representation is considered an easy-to-understand way of representing information, research in psychology \cite{Reitera} has shown that in many cases, a considerable amount of information might be required to understand graphical representation and novice users might be better off with text.
+
+Our application advices the user on what to wear with regard to the weather. As noted earlier, text is probably the best way to communicate advices. A possible approach to this would be to simply provide a structured text such as ``Weather: Rainy, What to wear: Jacket'', even though it might be informative, however it is not friendly, and could possibly cause user depression and frustration if they live in a place with generally bad, rapidly changing weather, such as Sweden. However, that is usually where users would need such an application in the first place. Ideally, the best way to convey the message would be naturally generated text with a funny joke, maybe overlaid on a meme, something similar to how a friend would describe the weather in order to uplift the user's spirit. However, due to limited time, resources and scope of this project, we will attempt to generate plain natural language tips.
+
+We build our system using 3 different methods that come from 2 different trends in the NLG field, namely, Corpus-Based Statistical Knowledge (CBSK)\cite{Langkilde1998} which is the first method to use Abstract Meaning Representation (AMR) and Robust-PCFG \cite{Cahill2006} and Treebank-trained statistical generator (TTSG) \cite{Belz} which are Context Free Grammar(CFG) based methods.
+
+\subsection{Contribution}
+We will build our system using 3 NLG methods, each relies on a different text generation philosophy, and have been developed for a different application. We will evaluate these methods for our application and compare their performance.
+
+\subsection{Outline}
+In Section~\ref{sec:relwork} we overview different trends in field of natural language generation such as Abstract Meaning Representation and TreeBank \& Context Free Grammar based architectures. We also briefly overview different common evaluation methods for NLG systems. In Section~\ref{sec:method} we describe our implementation details for each method, discussing different practical aspects such as design of corpus. In Section~\ref{sec:exps} we describe in detail our evaluation experiment for the 3 methods and discuss the effectiveness of the methodology of evaluation. Finally, in Section~\ref{sec:summary} we discuss the strengths and weaknesses of the different methods in light of our application.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related work}
+\label{sec:relwork}
+
+Until now, there has been a lot of research in the field of text generation, and as is expected there exists a plethora of implemented methods, using different architectures and bases. As mentioned in Section \ref{sec:intro} within the frame work of this project, three different methods are used:
+
+\begin{description}
+  \item[CBSK] In the work of \cite{Langkilde1998}, the system over generates sentences. These sentences are grouped together in an optimal way to form a state transition diagram which has English words as its edge. This state transition diagram of sentences is called as \emph{Word Lattice} as shown in Figure~\ref{fig:lattice}. Word Lattice is fed to a corpus based statistical ranker to get the best path of sentence as output, more likely to find fluent sentences over others.
+  
+  \item[Robust-PCFG] Using a PCFG the two different representations of an LFG are created, which then are turned into a chart-like data structure producing the most probable text-tree. Then, if possible, lexical smoothing is applied, in order to ensure that the resulting text is readable and makes sense.
+  
+  
+  \item[TTSG] ``Treebank-trained statistical generator'' \cite{Belz} is a statistical generation method that trains a statistical model by using an annotated corpus. When an input is submitted to an NLG system, the input can go through several generation stages before an output is produced. At each stage the NLG system needs to make a decision to select the next generation. The method we will implement here belong to a group of methods that separate between the space comprised of all possible generations on one side and the mechanisms used to make the selections at each of the generation stages on the other side.
+\end{description}
+
+Evaluating NLG systems is not a straightforward task. The quality of text can vary with regard to both the reader and the writer. Writers might not always produce text that is optimal from the reader's point of view, and text that is optimal from the reader's point of view, might not be optimally written. Also, since the target user of any NLG system is usually human, a variance in assessment will exist due to the variation in human understanding. Evaluation methods in the current literature can be grouped into three categories\cite{Reiter2009}, each tries to assess the NLG system from different perspectives. In Section~\ref{sec:exps}, we give details into our experiment and explain the methodology we used for evaluation.
+
+\subsection{Evaluation Methods}
+
+Current evaluation methods can be grouped into three categories\cite{Reiter2009}:
+\begin{itemize}
+\item Task-Based Evaluation
+\item Human Rating and Judgment
+\item Automatic Metrics
+\end{itemize}
+
+\subsubsection{Task-Based Evaluation}
+Task-based evaluation involve measuring the impact of the text on end-users. It usually involves assigning the users with a task related to the purpose of the NLG, and then measuring the user's performance during the task, such as, how many mistakes did the user make, how much did the user learn, or how did the user rank or sort a list of items related to text generated by the NLG. % % % % CITATION NEEEDED FOR THIS LIST
+
+\subsubsection{Human Rating and Judgment}
+In this group of methods, humans are asked to rate and judge the text generated by the NLG. This evaluation can be done in several ways. One way is to provide users with text that is written by humans along with that of the NLG system, and asking them to rate both without knowing which is written by which. Another is asking them to rate the quality of the text on a 5 point scale, or asking them to choose their favorite text.
+
+\subsubsection{Automatic Metrics}
+Evaluation methods involving humans are usually quite expensive, time consuming, hard to design, hard to repeat. For these reasons, there has been a growing interest in evaluating NLG systems by comparing them to a reference-text corpus created by human experts using automated metrics such as string-edit distance, tree similarity and BELU \cite{Papineni2001}. This is cheap, allows for repetitive immediate evaluation of the system. However, there exists some concerns for using these methods, among them is the fact that the reference-text corpora created by experts is optimal from a writer's point of view, which might not be optimal from a reader's point of view, therefore the test is for similarity to writer's text.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{My method}
+\label{sec:method}
+
+\input{cfg_pcfg.tex}
+
+We are basing our system upon 3 methods as previously mentioned. In this section we first describe each method in detail, then we cover implementation aspects that we changed to fit our application needs.
+
+\subsection{Robust-PCFG}
+This method \cite{Cahill2006} is based on a Probabilistic Context-Free Grammar (PCFG) \cite{Collins2013}  for the text generation, which in turn is based on an Lexical Functional Grammar (LFG)\cite{KaplanRonaldMWedekind2012}, that is automatically acquired.
+
+The LFG consists of two different kinds of representations, the Constituent (c-)Structure and the Functional (f-)Structure. c-Structure is a structured tree, one that describes the structure of the words in a sentence, in terms of word (or phrase) order. It basically resembles the parsing tree created by a PCFG, with certain additions to it. f-Structure is the c-structure transformed into an attribute-value matrix, providing specific syntactic terms, such as ``subject'', ``object'' etc.
+
+The algorithm that is used, needs  an f-structure and produces the most probable c-structure for the given input. There are two different approaches in creating the f-structures\cite{Cahill2006}: the \textbf{pipeline} architecture and the \textbf{integrated} architecture.
+
+In the first method we are given a treebank and based on that we create a PCFG. We, then, use this grammar to convert unseen text into PCFG-format trees. These trees are then annotated, in order to create the desired f-structure.
+
+In the integrated architecture, we are again given a treebank. In this case the treebanks are first annotated, and then an annotated PCFG is extracted from it. Using this grammar, the unseen text is parsed into a tree with only f-structure annotations, which are then  converted to an f-structure by a constraint solver.
+
+For the text to be generated the grammar is first converted into Chomsky Normal Form (CNF) and after that, a chart-like data structure is created\cite{Palo}. When two different chart items have equivalent rule left hand sides and lexical coverage, the most probable one is used, thus ensuring that the tree produced, is the most probable one with respect to the given f-structure.
+
+After the creation of the tree, lexical smoothing takes place, when possible. At this point the part-of-speech (POS) tag is used, i.e. each word is marked up as a specific part of speech, taking into account the texts context, along with the definition of the word. That is, if certain words have different uses, in terms of meaning (being used literally or metaphorically), or in terms of grammar (being used as a noun or verb etc).
+
+This method has been tested for the generation of sentences of varying lengths. It is evaluated using the Simple String Accuracy and BLEU evaluation metrics. In addition, the coverage is measured as the percentage of the given f-structures that generate a string.
+
+
+
+\subsection{TTSG}
+
+This method \cite{Belz} is using a context free grammar, and a statistical model trained on an annotated corpus. The model gives different priorities to the grammar rewrite rules. Follows is a brief overview of the method.
+
+\begin{enumerate}
+\item A raw parallel corpus will be built. Each row of the corpus will be comprised of two data fields: one field contains the weather prediction, and the other field contains the associated tip written in NL.  Below table shows and example two rows from the corpus.
+
+\begin{centering}
+\begin{tabular}{| c | c |}
+\hline
+2⁰ C, 5k/h,0mm & It’s cold, wear your heavy jacket \\
+\hline
+15⁰ C, 10k/h,33mm & Take your raincoat \\
+\hline
+\end{tabular}
+
+\end{centering}
+
+\item A rewrite grammar will be created; in particular a context free grammar. The grammar will contain few rules sufficient to represent the tip part of the corpus. Below shows the form of the planned grammar rules.
+\begin{itemize}
+\item[] Sentence $->$ VerbPhrase NounPhrase
+\item[] VerbPhrase $->$ Verb
+\item[] NounPhrase $->$ Pronoun Noun
+
+\end{itemize}
+
+\item The raw corpus will be annotated to generate a Treebank. This will be carried out following below steps:
+
+\begin{enumerate}
+\item For each tip sentence from the raw parallel corpus, the possible derivations will be created using the grammar defined in the previous step. A derivation shows the sequence of rewrite rules followed to reach to the sentence. A sentence may have more than one derivation. Below shows one way the sentence ``Take your raincoat'' can be derived using the example grammar in the previous step.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{pictures/SentenceDerivation.png}
+\caption{Sentence Derivation}
+\label{fig:sentenceDerivation}
+\end{figure}
+\item Using the derivations from (a), each substring of the sentence will be annotated with the corresponding rewrite rule that generated it. When (a) and (b) are carried for all the corpus, the resulting annotated corpus is the treebank. 
+\end{enumerate} 
+\item The count of each rewrite rule in the treebank will be made. Using that, the probability distribution for all the rewrite rules will be generated.
+
+\item The generation logic will be designed to recursively apply the rewrite rules using the defined grammar until all the non-terminals are completely replaced with terminals. At each generation step, when more than one rewrite rule are possible to be applied, the rewrite rule with the highest probability will be selected. This is the place where the built statistical model is used.  
+\end{enumerate}
+
+ 
+\subsection{CBSK}
+This method is the first method to generate text using AMR. It uses a word lattice as seen in Figure~\ref{fig:lattice}, to represent the overgenerated text and feeds this to statistical extractor for ranking as seen in Figure~\ref{fig:CBSKworkflow}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{pictures/CBSKworkflow.png}
+\caption{Combining symbolic generator and statistical extractor \cite{Langkilde1998}}
+\label{fig:CBSKworkflow}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{pictures/Lattice.png}
+\caption{Word Lattice \cite{Langkilde}}
+\label{fig:lattice}
+\end{figure}
+
+
+\subsubsection{Input representation (using AMR language)}
+
+AMR: Abstract Meaning Representation is labeled directed graph or feature structure,  we represent input in the form of meanings.
+\begin{itemize}
+\item Basic form of AMR is (label/concept). \\
+For eg: 
+\begin{itemize}
+\item[] (p1 / $|$cold $>$ weather$|$)          // ``Cold Weather''
+\end{itemize}
+\item Concepts can be modified by keywords.
+For eg: 
+\begin{itemize}
+\item[](p2 / $|$jacket,coat$|$ :quant plural)
+\end{itemize}
+	      This will cover word : jacket, jackets,coat,coats.
+\item Concepts can be associated with each other in a nested fashion to get more complex meaning. This can be done using keywords. \\
+For eg:\\
+(p3 / $|$is,be$|$
+			  :subject (p4 / $|$weather$|$)
+			  :object  (p5 / $|$cold$|$))
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{pictures/AMRExample.png}
+\caption{Representation of ``Weather is cold''}
+\label{fig:AMRExample}
+\end{figure}
+
+Notations:
+\begin{itemize}
+\item slash ``/'' is shorthand for type feature or instance
+\item ``$<$'' , ``$>$'' hierarchy indication
+\item ``subject'' , ``object'' are roles (out of many other roles)
+\item ``,'' is to represent OR
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Lexical and Morphological Knowledge}
+
+To this meaning (AMR) we apply lexical knowledge (lexicon) and morphological knowledge.
+The English lexicon used in AMR is basically SENSUS concept ontology. \emph{Rank} field is available in each lexicon, which orders the concepts by sense frequency for the given word.
+Lexicon here is kept simple and overrules many features, like transitivity, which are required for generators which produce correct grammatical sentences. But here, the post processor will handle this by ranking different grammatical realization according to their likelihood. Word choice issue is handled by taking advantage of the word sense ranking offered by lexicon. If several concepts can be expressed by same word then it will return only that word.
+
+Lexicon contains word in the root form. Morphological inflections must be applied. Inflections are applied without considering the resultant output meaning, as this issue is handled by the statistical extractor. 
+
+\subsubsection{Grammar Formalism}
+
+Syntactic and semantic roles are mapped to grammatical word lattice by using keyword rules. Instance rules will build initial word lattices for each lexical item (keyword-  :polarity, :quant) and for basic noun and verb groups. Other rules are defined to relate concepts based on role arrangements to build lattice. All the remaining keywords which are not relevant for the above two rules are kept under :rest role in order to avoid combinatorial explosion.
+
+\subsubsection{Generation Algorithm}
+The algorithm used here is compositional. AMR representation is transformed to word lattice, using keywords (which avoids syntactic representation). This provisions to have simple inputs. 
+
+\begin{itemize}
+\item Top level keywords is matched with the rule.
+\item Matched rule splits AMR and associate sub-AMR with each keyword of the rule and place all other relations in :rest role.
+\item Each sub-AMR is recursively matched against the keyword rules until it bottoms out in order to apply instance rule.
+\item Lexical and morphological knowledge is applied to build word lattice. Instance rules concatenates lattices to make phrases and filter them to desired category (sentence as default)
+\item Statistical extractor ranks the lattices for desired output. Bi-gram statistical extractor is used here.
+
+\end{itemize}
+
+\subsection{Implementation}
+\label{sec:impl}
+
+We will train the CFG methods \cite{Belz,Cahill2006} using a hand made corpus. For the AMR method, we will use the AMR Bank \cite{ISI} to create AMR.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimental results}
+\label{sec:exps}
+
+\subsection{Experiemntal setup}
+We have decided to use Human Rating and Judgment evaluation philosophy. For each scenario (e.g. \{rainy, cloudy, windy\} or \{sunny, clear, calm\}), we will provide the users with 4 texts, one from each system and a human written text. We will then ask the users to rank the texts according to their preference.
+
+\subsection{Experiment ...}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary and Conclusions}
+\label{sec:summary}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+\bibliography{library}
+
+
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[a4paper, portrait, margin=1.2in]{geometry}
+\usepackage{url}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{hhline}
+\usepackage{caption} 
+\usepackage{subcaption}
+\usepackage{wrapfig}
+%\usepackage[]{algorithm2e}
+\captionsetup[table]{belowskip=0pt}
+\captionsetup[table]{aboveskip=0pt}
+
+
+
+\graphicspath{{pictures/}}
+
+\title{Supernova: Generating Wardrobe Tips Depending On Weather}
+\author{\hspace*{-0.5cm}\begin{tabular}{cc}
+Omar Elshenawy & Mohamed Abdulaziz \\ 
+09/10/1990 & 31/07/1985 \\ 
+omares@kth.se & moaah@kth.se \\
+\includegraphics[width=0.13\linewidth]{Omar} & 
+\includegraphics[width=0.13\linewidth]{Mohamed} \\
+ Thomai Stathopoulou & Varsha Kirani Gopinath\\ 10/10/1987 & 04/06/1991 \\ thomai@kth.se & varsha@kth.se \\ 
+\includegraphics[width=0.13\linewidth]{Thomai} & 
+\includegraphics[width=0.13\linewidth]{Varsha}
+\end{tabular}} 
+% Normally there will not be any pictures but we want
+% these so that we can connect faces to names in the course
+% We also want birthdates so that we can tell people with the same
+% name apart
+\date{}
+
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{}
+\lhead{DD2380 ai14}
+\rhead{O. Elshenawy, T. Stathopoulou, M. Abdulaziz, V. Kirani}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\input{sections/abstract.tex}
+\clearpage
+
+\input{sections/intro.tex}
+\input{sections/related.tex}
+\input{sections/method.tex}
+\input{sections/exp_res.tex}
+\input{sections/sum_conc.tex}
+
+\bibliographystyle{plain}
+\bibliography{library}
+
+
+\end{document}

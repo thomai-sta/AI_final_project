@@ -1,0 +1,67 @@
+\subsection{Probabilistic Context-Free Grammars (PCFGs)}
+
+\subsubsection{An introduction to Context-Free Grammars (CFGs)} \label{subsec:cfg}
+\paragraph{}
+A Context-Free Grammar (CFG) is a 4-tuple $G=(N, \Sigma, R, S)$, where:
+\begin{itemize}
+\item N is a set of non-terminal symbols
+\item $\Sigma$ is a set of terminal symbols
+\item R is a set of rules of the form $X \rightarrow Y_1Y_2...Y_n$, where $X \in N, n \geq 0$ and $Y_i \in (N \cup \Sigma) \forall n=1,2,...n$
+\item $S \in N$ is a distinguished start symbol \footnote{The definition of a CFG is borrowed from \cite{Collins2013}}
+\end{itemize}
+
+A CFG creates sequences of symbols, replacing non-terminal symbols with a combination of non-terminal and terminal symbols, using the rules in R. The procedure of replacing symbols stops, when there are no non-terminal symbols left to be replaced. Every time a non-terminal symbol is replaced, the surrounding symbols are not taken into consideration, hence the term ``Context-Free''.
+
+When creating a CFG for a language (e.g. English), usually non-terminal symbols represent basic syntactic and grammatical categories, whereas terminal symbols represent actual words.
+
+In Figure \ref{fig:cfg}, an example of a CFG based on the English language is shown. It is obvious in this example, that the non-terminal symbols can either be generic syntactic terms (i.e. NP = Noun Phrase, VP = Verb Phrase etc.), or specific grammatical terms (i.e. NN = Noun Singular, Vi = Intransitive Verb, Vt = Transitive Verb etc.). 
+
+There is no restriction when it comes to the rules, as long as the symbol on the left-hand side of the rule is a \textit{non-terminal}. The symbols on the right-hand side, can be any combination of symbols (terminal and/or non-terminal), or even an empty string ($\epsilon$). A very specific kind of rule, is the unary rule. These rules have only \textit{one} symbol on the right-hand side and this symbol is always a terminal symbol (the table on the right side of Figure \ref{fig:cfg} shows all the unary rules of the example CFG). The set of the unary rules can also be described as a lexicon, i.e. a tag for every word in the language (or a subset of the used language), representing what part of speech each word is (part-of-speech tagging, POS tagging).
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{pictures/cfg_example.png}
+\caption{A Context-Free Grammar \cite{Collins2013}}
+\label{fig:cfg}
+\end{figure}
+
+\subsubsection{Parse Trees}
+\paragraph{}
+As mentioned in Section \ref{subsec:cfg}, given a CFG one can produce a sequence of symbols (i.e. a sentence), simply by replacing non-terminal symbols with other symbols, according to the rules in R. One very common method is, starting with the start symbol S, to always replace the left most non-terminal symbol of the sequence, until there are only terminal symbols left. The set of rules that were used, in order to create the sentence, can be represented as a tree. This tree is called a \textbf{Parse Tree}.
+
+Because of the fact that there can be different rules with the same non-terminal symbol on the left-hand side (the same non-terminal symbol can be replaced by different combinations of non-terminal and terminal symbols), there can be more than one parse trees for one sentence. Additionally, given a sentence there a different methods (parsers) to generate parse trees. More details about different parsers are discussed in Subsection [reference subsection].
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{pictures/parse_trees_example.png}
+\caption{Two different parse trees for the same sentence (symbol sequence) \cite{Collins2013}}
+\label{fig:parse_trees}
+\end{figure}
+
+\subsubsection{Probabilistic Context-Free Grammars (PCFGs)}
+\paragraph{}
+Given a CFG, as defined in Section \ref{subsec:cfg}, a Probabilistic Context-Free Grammar (PCFG), can be defined as an extension of the CFG. Therefore, it consists of the 4-tuple $G=(N, \Sigma, R, S)$, as well as the new variable:
+\begin{equation*}
+q(\alpha \rightarrow \beta) \forall \textsl{rule}\in R
+\end{equation*}
+
+The new variable represents the conditional probability of choosing rule $\alpha \rightarrow \beta$, given that the left-hand side non-terminal symbol is $\alpha$. So, for any non-terminal symbol $X$, there is the constraint:
+\begin{equation*}
+\sum_{X \rightarrow \beta \in R}q(X \rightarrow \beta) = 1 \textsf{ \cite{Collins2013}}
+\end{equation*}
+
+An example PCFG is presented in Figure \ref{fig:pcfg}. This example is based on the CFG of Figure \ref{fig:cfg}. Given a PCFG, one is able to calculate the probability of a parse tree, by multiplying the probabilities of all the rules that have been used for the production of the sentence. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{pictures/pcfg_example.png}
+\caption{A Probabilistic Context-Free Grammar \cite{Collins2013}}
+\label{fig:pcfg}
+\end{figure}
+
+In order to produce a PCFG based on a CFG, one would need to have a corpus, i.e. a set of sentences (symbol sequences) that can be produced by the given CFG. These sentences are converted into parse trees (according to the chosen parsing method) and the occurrences of every rule are counted. In the end the probability of every rule is the number of the rule's occurrences divided by the number of the occurrences of rules with the same non-terminal symbol on the left-hand side:
+\begin{equation*}
+q(\alpha \rightarrow \beta) = \dfrac{\textsl{Count}(\alpha \rightarrow \beta)}{\textsl{Count}(\alpha)}
+\end{equation*}
+
+After having created a PCFG, the next step would to actually try and generate sentences based on that particular grammar. For that, exist different methods, that are to be be discussed in Section [reference].

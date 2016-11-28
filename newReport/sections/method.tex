@@ -1,0 +1,63 @@
+\section{Method}
+\label{sec:method}
+In the Section, the combination of the different concepts of the previous Section is going to be discussed. Apart from implementing the method described in \ref{subsec:ttsg}, certain additions or variations are proposed and implemented.
+
+\subsection{Implementation}
+\label{subsec:impl}
+As is already mentioned, the basic structure of the generation system follows the structure of TTSG (\ref{subsec:ttsg}). Trying to describe the flow of the system, one can divide it into different parts, that are almost independent from each other. Every part is described in the following paragraphs. A flowchart of the basic steps of the system that was implemented is shown in Figure \ref{fig:flow_chart}.
+%\begin{itemize}
+%\setlength\itemsep{0em}
+%\item Classification of the input data
+%\item Creation of CFG
+%\item Creation of corpus \& lexicon
+%\item Creation of PCFG
+%\item Tip generation
+%\end{itemize}
+
+\paragraph*{CFG}
+The CFG, on which the tip generation is based, has been manually created, based on the basic rules in \cite{Collins2013} and \cite{Martin}. Some fundamental grammar and syntax rules of the English language are defined, making sure that they cover the entire available corpus and the needs of the application and, at the same time omitting the rules that were thought to be too detailed and complex.
+
+\paragraph*{Corpus \& Lexicon}
+The corpus is also manually created. It is a set of fifty-one ``wardrobe tips'', along with tags representing different weather conditions. An example of how the corpus looks like is: \\
+- hot/rainy/sunny/windy - you have to take your raincoat\\
+- cold/dry/sunny/windy - remember your blazer
+
+The lexicon used is the Treebank Lexicon \cite{lexicon}, with a few addition and modifications, to suit the needs of the application.
+
+\paragraph*{Input Data}
+The input data of the application, are going to be four variables, each representing a different aspect of a weather forecast:\\
+- \textbf{temperature} in degrees $^o C$\\
+- percentage of \textbf{cloud coverage}\\
+- probability of \textbf{rain}\\
+- speed of the \textbf{wind} in $km/h$\\
+After receiving these four parameters, they are being classified, by applying different thresholds (for the sake of simplicity, thresholds were chosen, instead of a more complex statistical model). This procedure, generates four tags, that constitute the weather forecast of the upcoming day. The different thresholds and their corresponding tags are shown in Table \ref{tab:tags}. For simplicity, only very distinct weather conditions were chosen.
+
+\begin{table}
+\caption{Different weather tags and their corresponding thresholds}\label{tab:tags}
+\scriptsize
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Temperature}  		  & \textbf{Cloud Coverage}     & \textbf{Rain Precipitation} & \textbf{Wind Speed} \\ \hline \hline
+    $\leq10^oC\rightarrow$ Cold  & $\leq50\%\rightarrow$ Sunny & $\leq50\%\rightarrow$ Dry   & $\leq11m/s\rightarrow$ Calm\\ \hline
+    $10 < x \leq20 ^oC\rightarrow$ Warm     & $> 50\%\rightarrow$ Cloudy	 & $> 50\%\rightarrow$ Rainy   & $>11 m/s \rightarrow$ Windy\\ \hline
+    $>20 ^oC \rightarrow$ Hot	&  &  &  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+\paragraph*{PCFG}
+The concept for the creation of the PCFG is as follows. After receiving the input data, and creating the different weather tags, the tips of the corpus are filtered based on their corresponding tags. The tips, whose tags, coincide with the weather conditions, constitute the corpus, that is converted to the Treebank used for the PCFG, thus ensuring that the system is trained on the correct data and avoiding tips that are inappropriate to the current weather. At this point, five different parsers (Section \ref{subsec:parsers}) are used for the creation of the Treebank, while testing the influence that they have in the final result.
+
+\paragraph*{Tip generation}
+After the PCFG is created, different generators are used, in order to complete the final part of the process, which is the creation of the tip. The generators used are the Greedy, Viterbi and Random generator, just like \cite{Belz}, as well as the n-gram Generator described in \cite{textbook}.
+
+In addition to the already implemented generators, a new one is proposed and used in the current paper. The \textbf{ProbGen} generator chooses the rule that will be used in a semi-random manner, based on the probability of all the rules that are taken into consideration. For example, if there are two rules with the same non-terminal symbol on the left-hand side, with probabilities 0.7 and 0.3, then the first rule will be chosen seven times out of ten, whereas the second will be chosen three. This adds variation to the resulting text, a quality that cannot be provided by the other generators.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{pictures/flow_chart.pdf}
+\caption{Flow Chart of the Implemented System}
+\label{fig:flow_chart}
+\end{figure}

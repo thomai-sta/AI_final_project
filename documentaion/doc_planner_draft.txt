@@ -1,0 +1,55 @@
+Weather Wardrope
+
+Below is a first draft for a description of the document planner model. This needs to be updated accoding to the final impl.
+
+Document planning
+================================
+Domain analysis
+	Entities:
+		Umberalla
+		Hat
+		Jacket
+		Sweater
+		Boot
+		Gloves
+	Attributes:
+		Heavy
+		Light
+		Thick
+		Water-resistant
+	Relationships:
+		Above
+		Under
+		Ontop
+	Classes:
+		Cloth
+			Bodywear
+			Footwear
+			Warm-cloth
+			light-cloth
+		Order (Above, under, ontop)
+		Cloth-Characters (heavy, light, thick, water-resistent)
+================================
+Messages
+	Cloth info?
+	
+	Cloth: Jackaet
+	Attribute: Light
+================================
+Content determination
+	Build a rule based logic which uses the weather information to determine the content:
+		Cloth class
+		Attribute, Order
+
+<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>
+
+Microyplanning
+	(Lexicalization, Referring experession generatoin & Aggregation)
+================================
+	Lexicalization
+		Mapping from domain concepts to lexical elements
+
+
+
+
+

@@ -1,0 +1,28 @@
+\subsection{Parsers} \label{subsec:parsers}
+The main task of a parser is to convert natural language sentences into parse trees (\ref{subsec:cfg}), in order to obtain the Treebank for the corpus in hand. There are several different parsers implemented. Some of them are below [cite]:\\
+- \textbf{Chart Parser} \\
+- \textbf{Bottom Up Chart Parser} \\
+- \textbf{Top Down Chart Parser} \\
+- \textbf{Early Chart Parser} \\
+- \textbf{Recursive Chart Parser} \\
+
+%\textbf{Chart} parsing is an example of dynamic programming, in the sense that only a sub part of the input is parsed and stored in charts. These sub-trees are then re-used when needed. As a result, the chart parser does not repeat the same work multiple times. This prevents both backtracking and combinatorial explosion.	
+%
+%\textbf{Bottom Up Chart} parsing starts from the input string and looks in the CFG to find the unary rules that contain the input's words. The parser replaces them with the left-hand side symbols of the rules and keeps replacing, until the whole sentence is reduced to S (start symbol). The intermediate symbols are recorded as edges on a chart.
+%
+%\textbf{The Top Down Chart} parser starts off at the top level symbol (S - start symbol). After that, it expands the nodes following different rules from the CFG, until it reaches the terminal symbols. Once a terminal is found, it is matched to the input string. Accordingly it is added as an edge to the chart. The chart is completed once the entire input string is matched to all the terminal symbols in the tree.
+%
+%\textbf{The Earley Chart} parser is a variant of the chart parser and it is based on top down parsing, but it deals more efficiently with matching against input strings, by considering both the top down and bottom up strategy. 
+%
+%\textbf{Recursive Descent} parsing is similar to top down parsing, but without using a chart to store the sub trees. It executes the same work multiple times.
+
+\subsection{Generators}\label{subsec:generators}
+Given a PCFG, a generator is responsible to produce sentences or phrases, according to different methods.
+
+\textbf{The Greedy Generator} starts from the start symbol and always chooses the rule with the highest probability, that has on the left-hand side the non-terminal symbol that needs to be replaced.
+
+\textbf{The Viterbi Generator} creates all possible parse trees that can be created from the given PCFG, then calculates the probabilities of every one of them. In the end it produces the sentence, whose parse tree has the highest probability.
+
+\textbf{The Random Generator} replaces the non-terminal symbols, by choosing randomly one rule, from the set of rules that apply to the corresponding non-terminal symbol.
+
+\textbf{The n-gram Generator} creates sentences, according to n-tuples of words, as described in [cite here].

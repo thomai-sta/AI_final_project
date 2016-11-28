@@ -1,0 +1,653 @@
+
+**************************************************
+viterbi:   sunny/windy/rainy/hot - wear your raincoat
+greedy:   sunny/windy/rainy/hot - wear your raincoat
+probGen:   sunny/windy/rainy/hot - you must wear a waterproof umbrella
+randGen:   sunny/windy/rainy/hot - remember light hat
+human written:   sunny/windy/rainy/hot -  wear your sunglasses
+human written:   sunny/windy/rainy/hot -  take a hat
+human written:   sunny/windy/rainy/hot -  you need your sunglasses
+human written:   sunny/windy/rainy/hot -  you have to take your raincoat
+human written:   sunny/windy/rainy/hot -  do not take your umbrella
+human written:   sunny/windy/rainy/hot -  put on your raincoat
+human written:   sunny/windy/rainy/hot -  do not wear many layers
+human written:   sunny/windy/rainy/hot -  wear shorts today
+human written:   sunny/windy/rainy/hot -  wear thin clothes
+human written:   sunny/windy/rainy/hot -  wear thin clothes
+human written:   sunny/windy/rainy/hot -  put on light clothes
+human written:   sunny/windy/rainy/hot -  remember your umbrella
+human written:   sunny/windy/rainy/hot -  do not take your raincoat
+human written:   sunny/windy/rainy/hot -  remember your hat
+human written:   sunny/windy/rainy/hot -  take your umbrella
+human written:   sunny/windy/rainy/hot -  do not take your rainboots
+human written:   sunny/windy/rainy/hot -  wear waterproof shoes
+human written:   sunny/windy/rainy/hot -  use your windbreaker
+human written:   sunny/windy/rainy/hot -  wear your windbreaker
+human written:   sunny/windy/rainy/hot -  put on a heavy coat
+human written:   sunny/windy/rainy/hot -  put on a thick coat
+human written:   sunny/windy/rainy/hot -  you must wear your sunglasses
+human written:   sunny/windy/rainy/hot -  you must wear your raincoat
+human written:   sunny/windy/rainy/hot -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/windy/rainy/cold - wear your raincoat
+greedy:   sunny/windy/rainy/cold - wear your raincoat
+probGen:   sunny/windy/rainy/cold - wear your beanie
+randGen:   sunny/windy/rainy/cold - take your blazer today
+human written:   sunny/windy/rainy/cold -  wear your sunglasses
+human written:   sunny/windy/rainy/cold -  take a hat
+human written:   sunny/windy/rainy/cold -  you need your sunglasses
+human written:   sunny/windy/rainy/cold -  you have to take your raincoat
+human written:   sunny/windy/rainy/cold -  do not take your umbrella
+human written:   sunny/windy/rainy/cold -  put on your raincoat
+human written:   sunny/windy/rainy/cold -  wear a heavy coat
+human written:   sunny/windy/rainy/cold -  remember the blazer
+human written:   sunny/windy/rainy/cold -  remember your jacket
+human written:   sunny/windy/rainy/cold -  wear many layers
+human written:   sunny/windy/rainy/cold -  put on your boots
+human written:   sunny/windy/rainy/cold -  take warm shoes
+human written:   sunny/windy/rainy/cold -  wear your scarf
+human written:   sunny/windy/rainy/cold -  wear a beanie
+human written:   sunny/windy/rainy/cold -  take a raincoat
+human written:   sunny/windy/rainy/cold -  take a warm sweater
+human written:   sunny/windy/rainy/cold -  wear many layers
+human written:   sunny/windy/rainy/cold -  wear your insulated boots
+human written:   sunny/windy/rainy/cold -  wear your winter socks
+human written:   sunny/windy/rainy/cold -  wear your thermal socks
+human written:   sunny/windy/rainy/cold -  wear your mittens
+human written:   sunny/windy/rainy/cold -  wear a pair of mittens
+human written:   sunny/windy/rainy/cold -  take a long coat today
+human written:   sunny/windy/rainy/cold -  take a long raincoat
+human written:   sunny/windy/rainy/cold -  remember your umbrella
+human written:   sunny/windy/rainy/cold -  take your umbrella
+human written:   sunny/windy/rainy/cold -  wear waterproof shoes
+human written:   sunny/windy/rainy/cold -  use your windbreaker
+human written:   sunny/windy/rainy/cold -  wear your windbreaker
+human written:   sunny/windy/rainy/cold -  put on a heavy coat
+human written:   sunny/windy/rainy/cold -  put on a thick coat
+human written:   sunny/windy/rainy/cold -  wear a warm coat
+human written:   sunny/windy/rainy/cold -  you must wear your sunglasses
+human written:   sunny/windy/rainy/cold -  you must wear your raincoat
+human written:   sunny/windy/rainy/cold -  you must take your umbrella
+human written:   sunny/windy/rainy/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/windy/rainy/warm - wear your umbrella
+greedy:   sunny/windy/rainy/warm - wear your umbrella
+probGen:   sunny/windy/rainy/warm - wear your sunglasses
+randGen:   sunny/windy/rainy/warm - you must take many layers
+human written:   sunny/windy/rainy/warm -  wear your sunglasses
+human written:   sunny/windy/rainy/warm -  take a hat
+human written:   sunny/windy/rainy/warm -  you need your sunglasses
+human written:   sunny/windy/rainy/warm -  you have to take your raincoat
+human written:   sunny/windy/rainy/warm -  do not take your umbrella
+human written:   sunny/windy/rainy/warm -  put on your raincoat
+human written:   sunny/windy/rainy/warm -  do not wear many layers
+human written:   sunny/windy/rainy/warm -  wear shorts today
+human written:   sunny/windy/rainy/warm -  wear thin clothes
+human written:   sunny/windy/rainy/warm -  remember your umbrella
+human written:   sunny/windy/rainy/warm -  take your umbrella
+human written:   sunny/windy/rainy/warm -  wear waterproof shoes
+human written:   sunny/windy/rainy/warm -  use your windbreaker
+human written:   sunny/windy/rainy/warm -  wear your windbreaker
+human written:   sunny/windy/rainy/warm -  put on a heavy coat
+human written:   sunny/windy/rainy/warm -  put on a thick coat
+human written:   sunny/windy/rainy/warm -  you must wear your sunglasses
+human written:   sunny/windy/rainy/warm -  you must wear your raincoat
+human written:   sunny/windy/rainy/warm -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/windy/dry/hot - wear your clothes
+greedy:   sunny/windy/dry/hot - wear your clothes
+probGen:   sunny/windy/dry/hot - remember your sunglasses
+randGen:   sunny/windy/dry/hot - you must use shorts
+human written:   sunny/windy/dry/hot -  wear your sunglasses
+human written:   sunny/windy/dry/hot -  you need your sunglasses
+human written:   sunny/windy/dry/hot -  do not wear many layers
+human written:   sunny/windy/dry/hot -  wear shorts today
+human written:   sunny/windy/dry/hot -  wear thin clothes
+human written:   sunny/windy/dry/hot -  wear thin clothes
+human written:   sunny/windy/dry/hot -  put on light clothes
+human written:   sunny/windy/dry/hot -  remember your hat
+human written:   sunny/windy/dry/hot -  use your windbreaker
+human written:   sunny/windy/dry/hot -  wear your windbreaker
+human written:   sunny/windy/dry/hot -  put on a heavy coat
+human written:   sunny/windy/dry/hot -  put on a thick coat
+human written:   sunny/windy/dry/hot -  you must wear your sunglasses
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/windy/dry/cold - wear your coat
+greedy:   sunny/windy/dry/cold - wear your coat
+probGen:   sunny/windy/dry/cold - wear your sweater
+randGen:   sunny/windy/dry/cold - you need a sweater today
+human written:   sunny/windy/dry/cold -  wear your sunglasses
+human written:   sunny/windy/dry/cold -  you need your sunglasses
+human written:   sunny/windy/dry/cold -  wear a heavy coat
+human written:   sunny/windy/dry/cold -  remember the blazer
+human written:   sunny/windy/dry/cold -  remember your jacket
+human written:   sunny/windy/dry/cold -  wear many layers
+human written:   sunny/windy/dry/cold -  put on your boots
+human written:   sunny/windy/dry/cold -  take warm shoes
+human written:   sunny/windy/dry/cold -  wear your scarf
+human written:   sunny/windy/dry/cold -  take a raincoat
+human written:   sunny/windy/dry/cold -  take a warm sweater
+human written:   sunny/windy/dry/cold -  wear many layers
+human written:   sunny/windy/dry/cold -  wear your mittens
+human written:   sunny/windy/dry/cold -  wear a pair of mittens
+human written:   sunny/windy/dry/cold -  take a long coat today
+human written:   sunny/windy/dry/cold -  use your windbreaker
+human written:   sunny/windy/dry/cold -  wear your windbreaker
+human written:   sunny/windy/dry/cold -  put on a heavy coat
+human written:   sunny/windy/dry/cold -  put on a thick coat
+human written:   sunny/windy/dry/cold -  wear a warm coat
+human written:   sunny/windy/dry/cold -  you must wear your sunglasses
+human written:   sunny/windy/dry/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/windy/dry/warm - wear your sunglasses
+greedy:   sunny/windy/dry/warm - wear your sunglasses
+probGen:   sunny/windy/dry/warm - you need your clothes
+randGen:   sunny/windy/dry/warm - wear your clothes today
+human written:   sunny/windy/dry/warm -  wear your sunglasses
+human written:   sunny/windy/dry/warm -  you need your sunglasses
+human written:   sunny/windy/dry/warm -  do not wear many layers
+human written:   sunny/windy/dry/warm -  wear shorts today
+human written:   sunny/windy/dry/warm -  wear thin clothes
+human written:   sunny/windy/dry/warm -  use your windbreaker
+human written:   sunny/windy/dry/warm -  wear your windbreaker
+human written:   sunny/windy/dry/warm -  put on a heavy coat
+human written:   sunny/windy/dry/warm -  put on a thick coat
+human written:   sunny/windy/dry/warm -  you must wear your sunglasses
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/rainy/hot - wear your umbrella
+greedy:   sunny/calm/rainy/hot - wear your clothes
+probGen:   sunny/calm/rainy/hot - do not wear your raincoat
+randGen:   sunny/calm/rainy/hot - you must remember your umbrella today
+human written:   sunny/calm/rainy/hot -  wear your sunglasses
+human written:   sunny/calm/rainy/hot -  take a hat
+human written:   sunny/calm/rainy/hot -  you need your sunglasses
+human written:   sunny/calm/rainy/hot -  take an umbrella
+human written:   sunny/calm/rainy/hot -  you need your umbrella
+human written:   sunny/calm/rainy/hot -  you should use your umbrella
+human written:   sunny/calm/rainy/hot -  do not wear many layers
+human written:   sunny/calm/rainy/hot -  wear shorts today
+human written:   sunny/calm/rainy/hot -  wear thin clothes
+human written:   sunny/calm/rainy/hot -  wear thin clothes
+human written:   sunny/calm/rainy/hot -  put on light clothes
+human written:   sunny/calm/rainy/hot -  remember your umbrella
+human written:   sunny/calm/rainy/hot -  do not take your raincoat
+human written:   sunny/calm/rainy/hot -  remember your hat
+human written:   sunny/calm/rainy/hot -  take your umbrella
+human written:   sunny/calm/rainy/hot -  do not take your rainboots
+human written:   sunny/calm/rainy/hot -  wear waterproof shoes
+human written:   sunny/calm/rainy/hot -  you must wear your sunglasses
+human written:   sunny/calm/rainy/hot -  you must wear your raincoat
+human written:   sunny/calm/rainy/hot -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/rainy/cold - wear your umbrella
+greedy:   sunny/calm/rainy/cold - wear your sunglasses
+probGen:   sunny/calm/rainy/cold - you must take many umbrella
+randGen:   sunny/calm/rainy/cold - wear your thermal sunglasses
+human written:   sunny/calm/rainy/cold -  wear your sunglasses
+human written:   sunny/calm/rainy/cold -  take a hat
+human written:   sunny/calm/rainy/cold -  you need your sunglasses
+human written:   sunny/calm/rainy/cold -  take an umbrella
+human written:   sunny/calm/rainy/cold -  you need your umbrella
+human written:   sunny/calm/rainy/cold -  you should use your umbrella
+human written:   sunny/calm/rainy/cold -  take a warm sweater
+human written:   sunny/calm/rainy/cold -  wear many layers
+human written:   sunny/calm/rainy/cold -  wear your insulated boots
+human written:   sunny/calm/rainy/cold -  wear your winter socks
+human written:   sunny/calm/rainy/cold -  remember your umbrella
+human written:   sunny/calm/rainy/cold -  take your umbrella
+human written:   sunny/calm/rainy/cold -  wear waterproof shoes
+human written:   sunny/calm/rainy/cold -  wear a warm coat
+human written:   sunny/calm/rainy/cold -  you must wear your sunglasses
+human written:   sunny/calm/rainy/cold -  you must wear your raincoat
+human written:   sunny/calm/rainy/cold -  you must take your umbrella
+human written:   sunny/calm/rainy/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/rainy/warm - wear your umbrella
+greedy:   sunny/calm/rainy/warm - wear your sunglasses
+probGen:   sunny/calm/rainy/warm - do not wear waterproof umbrella
+randGen:   sunny/calm/rainy/warm - remember a raincoat
+human written:   sunny/calm/rainy/warm -  wear your sunglasses
+human written:   sunny/calm/rainy/warm -  take a hat
+human written:   sunny/calm/rainy/warm -  you need your sunglasses
+human written:   sunny/calm/rainy/warm -  take an umbrella
+human written:   sunny/calm/rainy/warm -  you need your umbrella
+human written:   sunny/calm/rainy/warm -  you should use your umbrella
+human written:   sunny/calm/rainy/warm -  do not wear many layers
+human written:   sunny/calm/rainy/warm -  wear shorts today
+human written:   sunny/calm/rainy/warm -  wear thin clothes
+human written:   sunny/calm/rainy/warm -  remember your umbrella
+human written:   sunny/calm/rainy/warm -  take your umbrella
+human written:   sunny/calm/rainy/warm -  wear waterproof shoes
+human written:   sunny/calm/rainy/warm -  you must wear your sunglasses
+human written:   sunny/calm/rainy/warm -  you must wear your raincoat
+human written:   sunny/calm/rainy/warm -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/dry/hot - wear your clothes
+greedy:   sunny/calm/dry/hot - wear thin clothes
+probGen:   sunny/calm/dry/hot - do not wear thin shorts
+randGen:   sunny/calm/dry/hot - do not wear many clothes today
+human written:   sunny/calm/dry/hot -  wear your sunglasses
+human written:   sunny/calm/dry/hot -  you need your sunglasses
+human written:   sunny/calm/dry/hot -  do not wear many layers
+human written:   sunny/calm/dry/hot -  wear shorts today
+human written:   sunny/calm/dry/hot -  wear thin clothes
+human written:   sunny/calm/dry/hot -  wear thin clothes
+human written:   sunny/calm/dry/hot -  put on light clothes
+human written:   sunny/calm/dry/hot -  remember your hat
+human written:   sunny/calm/dry/hot -  you must wear your sunglasses
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/dry/cold - wear your sunglasses
+greedy:   sunny/calm/dry/cold - wear your sunglasses
+probGen:   sunny/calm/dry/cold - wear many sunglasses
+randGen:   sunny/calm/dry/cold - wear your coat
+human written:   sunny/calm/dry/cold -  wear your sunglasses
+human written:   sunny/calm/dry/cold -  you need your sunglasses
+human written:   sunny/calm/dry/cold -  take a warm sweater
+human written:   sunny/calm/dry/cold -  wear many layers
+human written:   sunny/calm/dry/cold -  wear a warm coat
+human written:   sunny/calm/dry/cold -  you must wear your sunglasses
+human written:   sunny/calm/dry/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   sunny/calm/dry/warm - wear your sunglasses
+greedy:   sunny/calm/dry/warm - wear your sunglasses
+probGen:   sunny/calm/dry/warm - wear your sunglasses
+randGen:   sunny/calm/dry/warm - you must wear thin shorts today
+human written:   sunny/calm/dry/warm -  wear your sunglasses
+human written:   sunny/calm/dry/warm -  you need your sunglasses
+human written:   sunny/calm/dry/warm -  do not wear many layers
+human written:   sunny/calm/dry/warm -  wear shorts today
+human written:   sunny/calm/dry/warm -  wear thin clothes
+human written:   sunny/calm/dry/warm -  you must wear your sunglasses
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/rainy/hot - put your raincoat
+greedy:   cloudy/windy/rainy/hot - wear your raincoat
+probGen:   cloudy/windy/rainy/hot - put on your raincoat
+randGen:   cloudy/windy/rainy/hot - you have to wear a waterproof layers today
+human written:   cloudy/windy/rainy/hot -  you have to take your raincoat
+human written:   cloudy/windy/rainy/hot -  do not take your umbrella
+human written:   cloudy/windy/rainy/hot -  put on your raincoat
+human written:   cloudy/windy/rainy/hot -  do not wear many layers
+human written:   cloudy/windy/rainy/hot -  wear shorts today
+human written:   cloudy/windy/rainy/hot -  wear thin clothes
+human written:   cloudy/windy/rainy/hot -  you do not need your sunglasses
+human written:   cloudy/windy/rainy/hot -  wear thin clothes
+human written:   cloudy/windy/rainy/hot -  put on light clothes
+human written:   cloudy/windy/rainy/hot -  remember your umbrella
+human written:   cloudy/windy/rainy/hot -  do not take your raincoat
+human written:   cloudy/windy/rainy/hot -  take your umbrella
+human written:   cloudy/windy/rainy/hot -  do not take your rainboots
+human written:   cloudy/windy/rainy/hot -  wear waterproof shoes
+human written:   cloudy/windy/rainy/hot -  use your windbreaker
+human written:   cloudy/windy/rainy/hot -  wear your windbreaker
+human written:   cloudy/windy/rainy/hot -  put on a heavy coat
+human written:   cloudy/windy/rainy/hot -  put on a thick coat
+human written:   cloudy/windy/rainy/hot -  you must wear your raincoat
+human written:   cloudy/windy/rainy/hot -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/rainy/cold - wear your raincoat
+greedy:   cloudy/windy/rainy/cold - wear your raincoat
+probGen:   cloudy/windy/rainy/cold - wear warm boots
+randGen:   cloudy/windy/rainy/cold - you must take the beanie
+human written:   cloudy/windy/rainy/cold -  you have to take your raincoat
+human written:   cloudy/windy/rainy/cold -  do not take your umbrella
+human written:   cloudy/windy/rainy/cold -  put on your raincoat
+human written:   cloudy/windy/rainy/cold -  wear a heavy coat
+human written:   cloudy/windy/rainy/cold -  remember the blazer
+human written:   cloudy/windy/rainy/cold -  remember your jacket
+human written:   cloudy/windy/rainy/cold -  wear many layers
+human written:   cloudy/windy/rainy/cold -  put on your boots
+human written:   cloudy/windy/rainy/cold -  take warm shoes
+human written:   cloudy/windy/rainy/cold -  wear your scarf
+human written:   cloudy/windy/rainy/cold -  wear a beanie
+human written:   cloudy/windy/rainy/cold -  take a raincoat
+human written:   cloudy/windy/rainy/cold -  you do not need your sunglasses
+human written:   cloudy/windy/rainy/cold -  take a warm sweater
+human written:   cloudy/windy/rainy/cold -  wear many layers
+human written:   cloudy/windy/rainy/cold -  wear your insulated boots
+human written:   cloudy/windy/rainy/cold -  wear your winter socks
+human written:   cloudy/windy/rainy/cold -  wear your thermal socks
+human written:   cloudy/windy/rainy/cold -  wear your mittens
+human written:   cloudy/windy/rainy/cold -  wear a pair of mittens
+human written:   cloudy/windy/rainy/cold -  take a long coat today
+human written:   cloudy/windy/rainy/cold -  take a long raincoat
+human written:   cloudy/windy/rainy/cold -  remember your umbrella
+human written:   cloudy/windy/rainy/cold -  take your umbrella
+human written:   cloudy/windy/rainy/cold -  wear waterproof shoes
+human written:   cloudy/windy/rainy/cold -  use your windbreaker
+human written:   cloudy/windy/rainy/cold -  wear your windbreaker
+human written:   cloudy/windy/rainy/cold -  put on a heavy coat
+human written:   cloudy/windy/rainy/cold -  put on a thick coat
+human written:   cloudy/windy/rainy/cold -  wear a warm coat
+human written:   cloudy/windy/rainy/cold -  you must wear your raincoat
+human written:   cloudy/windy/rainy/cold -  you must take your umbrella
+human written:   cloudy/windy/rainy/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/rainy/warm - wear your umbrella
+greedy:   cloudy/windy/rainy/warm - wear your umbrella
+probGen:   cloudy/windy/rainy/warm - you must take your windbreaker
+randGen:   cloudy/windy/rainy/warm - you must remember thick sunglasses today
+human written:   cloudy/windy/rainy/warm -  you have to take your raincoat
+human written:   cloudy/windy/rainy/warm -  do not take your umbrella
+human written:   cloudy/windy/rainy/warm -  put on your raincoat
+human written:   cloudy/windy/rainy/warm -  do not wear many layers
+human written:   cloudy/windy/rainy/warm -  wear shorts today
+human written:   cloudy/windy/rainy/warm -  wear thin clothes
+human written:   cloudy/windy/rainy/warm -  you do not need your sunglasses
+human written:   cloudy/windy/rainy/warm -  remember your umbrella
+human written:   cloudy/windy/rainy/warm -  take your umbrella
+human written:   cloudy/windy/rainy/warm -  wear waterproof shoes
+human written:   cloudy/windy/rainy/warm -  use your windbreaker
+human written:   cloudy/windy/rainy/warm -  wear your windbreaker
+human written:   cloudy/windy/rainy/warm -  put on a heavy coat
+human written:   cloudy/windy/rainy/warm -  put on a thick coat
+human written:   cloudy/windy/rainy/warm -  you must wear your raincoat
+human written:   cloudy/windy/rainy/warm -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/dry/hot - wear clothes
+greedy:   cloudy/windy/dry/hot - wear thin clothes
+probGen:   cloudy/windy/dry/hot - wear your windbreaker
+randGen:   cloudy/windy/dry/hot - you do not need your windbreaker
+human written:   cloudy/windy/dry/hot -  do not wear many layers
+human written:   cloudy/windy/dry/hot -  wear shorts today
+human written:   cloudy/windy/dry/hot -  wear thin clothes
+human written:   cloudy/windy/dry/hot -  you do not need your sunglasses
+human written:   cloudy/windy/dry/hot -  wear thin clothes
+human written:   cloudy/windy/dry/hot -  put on light clothes
+human written:   cloudy/windy/dry/hot -  use your windbreaker
+human written:   cloudy/windy/dry/hot -  wear your windbreaker
+human written:   cloudy/windy/dry/hot -  put on a heavy coat
+human written:   cloudy/windy/dry/hot -  put on a thick coat
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/dry/cold - wear your coat
+greedy:   cloudy/windy/dry/cold - wear your coat
+probGen:   cloudy/windy/dry/cold - wear long coat
+randGen:   cloudy/windy/dry/cold - you do not need a pair of boots today
+human written:   cloudy/windy/dry/cold -  wear a heavy coat
+human written:   cloudy/windy/dry/cold -  remember the blazer
+human written:   cloudy/windy/dry/cold -  remember your jacket
+human written:   cloudy/windy/dry/cold -  wear many layers
+human written:   cloudy/windy/dry/cold -  put on your boots
+human written:   cloudy/windy/dry/cold -  take warm shoes
+human written:   cloudy/windy/dry/cold -  wear your scarf
+human written:   cloudy/windy/dry/cold -  take a raincoat
+human written:   cloudy/windy/dry/cold -  you do not need your sunglasses
+human written:   cloudy/windy/dry/cold -  take a warm sweater
+human written:   cloudy/windy/dry/cold -  wear many layers
+human written:   cloudy/windy/dry/cold -  wear your mittens
+human written:   cloudy/windy/dry/cold -  wear a pair of mittens
+human written:   cloudy/windy/dry/cold -  take a long coat today
+human written:   cloudy/windy/dry/cold -  use your windbreaker
+human written:   cloudy/windy/dry/cold -  wear your windbreaker
+human written:   cloudy/windy/dry/cold -  put on a heavy coat
+human written:   cloudy/windy/dry/cold -  put on a thick coat
+human written:   cloudy/windy/dry/cold -  wear a warm coat
+human written:   cloudy/windy/dry/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/windy/dry/warm - wear your coat
+greedy:   cloudy/windy/dry/warm - wear your clothes
+probGen:   cloudy/windy/dry/warm - wear your windbreaker
+randGen:   cloudy/windy/dry/warm - do not use coat today
+human written:   cloudy/windy/dry/warm -  do not wear many layers
+human written:   cloudy/windy/dry/warm -  wear shorts today
+human written:   cloudy/windy/dry/warm -  wear thin clothes
+human written:   cloudy/windy/dry/warm -  you do not need your sunglasses
+human written:   cloudy/windy/dry/warm -  use your windbreaker
+human written:   cloudy/windy/dry/warm -  wear your windbreaker
+human written:   cloudy/windy/dry/warm -  put on a heavy coat
+human written:   cloudy/windy/dry/warm -  put on a thick coat
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/rainy/hot - wear your umbrella
+greedy:   cloudy/calm/rainy/hot - wear your clothes
+probGen:   cloudy/calm/rainy/hot - take your umbrella
+randGen:   cloudy/calm/rainy/hot - you do not need an raincoat
+human written:   cloudy/calm/rainy/hot -  take an umbrella
+human written:   cloudy/calm/rainy/hot -  you need your umbrella
+human written:   cloudy/calm/rainy/hot -  you should use your umbrella
+human written:   cloudy/calm/rainy/hot -  do not wear many layers
+human written:   cloudy/calm/rainy/hot -  wear shorts today
+human written:   cloudy/calm/rainy/hot -  wear thin clothes
+human written:   cloudy/calm/rainy/hot -  you do not need your sunglasses
+human written:   cloudy/calm/rainy/hot -  wear thin clothes
+human written:   cloudy/calm/rainy/hot -  put on light clothes
+human written:   cloudy/calm/rainy/hot -  remember your umbrella
+human written:   cloudy/calm/rainy/hot -  do not take your raincoat
+human written:   cloudy/calm/rainy/hot -  take your umbrella
+human written:   cloudy/calm/rainy/hot -  do not take your rainboots
+human written:   cloudy/calm/rainy/hot -  wear waterproof shoes
+human written:   cloudy/calm/rainy/hot -  you must wear your raincoat
+human written:   cloudy/calm/rainy/hot -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/rainy/cold - wear your umbrella
+greedy:   cloudy/calm/rainy/cold - wear your umbrella
+probGen:   cloudy/calm/rainy/cold - you must take insulated boots
+randGen:   cloudy/calm/rainy/cold - take a raincoat
+human written:   cloudy/calm/rainy/cold -  take an umbrella
+human written:   cloudy/calm/rainy/cold -  you need your umbrella
+human written:   cloudy/calm/rainy/cold -  you should use your umbrella
+human written:   cloudy/calm/rainy/cold -  you do not need your sunglasses
+human written:   cloudy/calm/rainy/cold -  take a warm sweater
+human written:   cloudy/calm/rainy/cold -  wear many layers
+human written:   cloudy/calm/rainy/cold -  wear your insulated boots
+human written:   cloudy/calm/rainy/cold -  wear your winter socks
+human written:   cloudy/calm/rainy/cold -  remember your umbrella
+human written:   cloudy/calm/rainy/cold -  take your umbrella
+human written:   cloudy/calm/rainy/cold -  wear waterproof shoes
+human written:   cloudy/calm/rainy/cold -  wear a warm coat
+human written:   cloudy/calm/rainy/cold -  you must wear your raincoat
+human written:   cloudy/calm/rainy/cold -  you must take your umbrella
+human written:   cloudy/calm/rainy/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/rainy/warm - wear your umbrella
+greedy:   cloudy/calm/rainy/warm - wear your umbrella
+probGen:   cloudy/calm/rainy/warm - wear many raincoat
+randGen:   cloudy/calm/rainy/warm - take sunglasses
+human written:   cloudy/calm/rainy/warm -  take an umbrella
+human written:   cloudy/calm/rainy/warm -  you need your umbrella
+human written:   cloudy/calm/rainy/warm -  you should use your umbrella
+human written:   cloudy/calm/rainy/warm -  do not wear many layers
+human written:   cloudy/calm/rainy/warm -  wear shorts today
+human written:   cloudy/calm/rainy/warm -  wear thin clothes
+human written:   cloudy/calm/rainy/warm -  you do not need your sunglasses
+human written:   cloudy/calm/rainy/warm -  remember your umbrella
+human written:   cloudy/calm/rainy/warm -  take your umbrella
+human written:   cloudy/calm/rainy/warm -  wear waterproof shoes
+human written:   cloudy/calm/rainy/warm -  you must wear your raincoat
+human written:   cloudy/calm/rainy/warm -  you must take your umbrella
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/dry/hot - wear thin clothes
+greedy:   cloudy/calm/dry/hot - wear thin clothes
+probGen:   cloudy/calm/dry/hot - wear many clothes
+randGen:   cloudy/calm/dry/hot - wear shorts today
+human written:   cloudy/calm/dry/hot -  do not wear many layers
+human written:   cloudy/calm/dry/hot -  wear shorts today
+human written:   cloudy/calm/dry/hot -  wear thin clothes
+human written:   cloudy/calm/dry/hot -  you do not need your sunglasses
+human written:   cloudy/calm/dry/hot -  wear thin clothes
+human written:   cloudy/calm/dry/hot -  put on light clothes
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/dry/cold - wear warm sweater
+greedy:   cloudy/calm/dry/cold - wear warm sunglasses
+probGen:   cloudy/calm/dry/cold - wear warm coat
+randGen:   cloudy/calm/dry/cold - you must take your sunglasses
+human written:   cloudy/calm/dry/cold -  you do not need your sunglasses
+human written:   cloudy/calm/dry/cold -  take a warm sweater
+human written:   cloudy/calm/dry/cold -  wear many layers
+human written:   cloudy/calm/dry/cold -  wear a warm coat
+human written:   cloudy/calm/dry/cold -  you must wear thermal socks
+
+
+
+
+
+
+**************************************************
+**************************************************
+viterbi:   cloudy/calm/dry/warm - wear clothes
+greedy:   cloudy/calm/dry/warm - wear thin clothes
+probGen:   cloudy/calm/dry/warm - wear your layers today
+randGen:   cloudy/calm/dry/warm - do not wear your sunglasses
+human written:   cloudy/calm/dry/warm -  do not wear many layers
+human written:   cloudy/calm/dry/warm -  wear shorts today
+human written:   cloudy/calm/dry/warm -  wear thin clothes
+human written:   cloudy/calm/dry/warm -  you do not need your sunglasses
+
+
+
+
+
+
+**************************************************

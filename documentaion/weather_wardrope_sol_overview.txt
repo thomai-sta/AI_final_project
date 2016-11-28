@@ -1,0 +1,36 @@
+Document planner:
+Input: 
+	Weather forcast for today
+	Temperature
+	Propability of rain
+	Sun exposure
+	Wind speed
+Buisness logic:
+	Rules will be applied to map the weather information to weather tags
+	sun: sunny,cloudy
+	rain: rainy, notRainy
+	wind: windy, notWindy
+	Temp: hot,cold
+Output:
+	The document plan (all the weather tags)
+
+Microplanner
+	Input:
+		Message from the planner that contains weather tags
+	Assumption:
+		A lexicon that contains all the words from the corpus gouped based on the weather tags
+	Operation:
+		....
+		THe words from the lexicon that belong to the tags specified in the input will be selected. 
+		The rules int he PCFG that has these will be adjusted to the list of selected words
+	Output
+		Adjusted PCFG
+
+
+Realizer
+	Input:
+		Adjusted PCFG
+	Operation:
+		....
+	Output
+		The sentence

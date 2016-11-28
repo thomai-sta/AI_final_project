@@ -1,0 +1,249 @@
+rainy/sunny/warm/windy - you have to take your raincoat
+rainy/sunny/warm/windy - wear your sunglasses
+rainy/sunny/warm/windy - wear waterproof shoes
+rainy/sunny/warm/windy - use your windbreaker
+rainy/sunny/warm/windy - do not take your umbrella
+rainy/sunny/warm/windy - you must wear your raincoat
+rainy/sunny/warm/windy - wear thin clothes
+calm/cloudy/dry/hot - wear thin clothes
+calm/cloudy/dry/hot - put on light clothes
+dry/hot/sunny/windy - wear shorts today
+dry/hot/sunny/windy - put on a thick coat
+dry/hot/sunny/windy - wear thin clothes
+dry/hot/sunny/windy - remember your hat
+dry/hot/sunny/windy - you must wear your sunglasses
+calm/cloudy/cold/rainy - wear a warm coat
+calm/cloudy/cold/rainy - you must wear your raincoat
+calm/cloudy/cold/rainy - you must take your umbrella
+calm/cloudy/cold/rainy - take a warm sweater
+calm/cloudy/cold/rainy - you need your umbrella
+dry/calm/cloudy/cold - wear many layers
+calm/cloudy/cold/dry - wear a warm coat
+calm/cloudy/cold/dry - take a warm sweater
+cloudy/cold/dry/windy - take a long coat today
+cloudy/cold/dry/windy - wear many layers
+cloudy/cold/dry/windy - take a warm sweater
+cloudy/cold/dry/windy - wear your mittens
+cloudy/cold/dry/windy - put on a thick coat
+cloudy/cold/dry/windy - wear your windbreaker
+cloudy/cold/dry/windy - wear a pair of mittens
+cloudy/hot/rainy/windy - put on a heavy coat
+cloudy/hot/rainy/windy - wear thin clothes
+cloudy/hot/rainy/windy - wear thin clothes
+cloudy/hot/rainy/windy - do not wear many layers
+cloudy/hot/rainy/windy - put on light clothes
+cloudy/hot/rainy/windy - do not take your rainboots
+cloudy/hot/rainy/windy - use your windbreaker
+cloudy/dry/warm/windy - wear your windbreaker
+cloudy/dry/warm/windy - do not wear many layers
+cloudy/dry/warm/windy - you do not need your sunglasses
+calm/cloudy/hot/rainy - remember your umbrella
+calm/cloudy/hot/rainy - do not wear many layers
+calm/cloudy/hot/rainy - you must wear your raincoat
+calm/cloudy/hot/rainy - wear shorts today
+calm/cloudy/hot/rainy - wear thin clothes
+calm/cloudy/hot/rainy - wear thin clothes
+cloudy/dry/hot/windy - use your windbreaker
+cloudy/dry/hot/windy - put on a thick coat
+cloudy/dry/hot/windy - put on a heavy coat
+cloudy/dry/hot/windy - put on light clothes
+dry/sunny/warm/windy - wear shorts today
+dry/sunny/warm/windy - wear your windbreaker
+dry/sunny/warm/windy - wear your sunglasses
+dry/sunny/warm/windy - use your windbreaker
+calm/cold/dry/sunny - wear a warm coat
+calm/cold/dry/sunny - you need your sunglasses
+calm/dry/sunny/warm - you must wear your sunglasses
+calm/dry/sunny/warm - you need your sunglasses
+cold/rainy/sunny/windy - wear your insulated boots
+cold/rainy/sunny/windy - you need your sunglasses
+cold/rainy/sunny/windy - wear your scarf
+cold/rainy/sunny/windy - put on a thick coat
+cold/rainy/sunny/windy - put on your raincoat
+cold/rainy/sunny/windy - you must take your umbrella
+cold/rainy/sunny/windy - wear many layers
+cold/rainy/sunny/windy - take warm shoes
+cold/rainy/sunny/windy - you must wear your sunglasses
+cold/rainy/sunny/windy - remember your umbrella
+cold/rainy/sunny/windy - take a long raincoat
+cold/rainy/sunny/windy - take a raincoat
+cloudy/rainy/warm/windy - put on a thick coat
+cloudy/rainy/warm/windy - wear your windbreaker
+cloudy/rainy/warm/windy - you must wear your raincoat
+cloudy/rainy/warm/windy - do not take your umbrella
+cloudy/rainy/warm/windy - you do not need your sunglasses
+cloudy/rainy/warm/windy - put on a heavy coat
+/cold/sunny/windy - wear many layers
+hot/rainy/sunny/windy - wear thin clothes
+hot/rainy/sunny/windy - put on a heavy coat
+hot/rainy/sunny/windy - put on your raincoat
+hot/rainy/sunny/windy - you must take your umbrella
+hot/rainy/sunny/windy - you must wear your raincoat
+hot/rainy/sunny/windy - take your umbrella
+hot/rainy/sunny/windy - wear waterproof shoes
+hot/rainy/sunny/windy - put on light clothes
+cold/dry/sunny/windy - wear your mittens
+cold/dry/sunny/windy - take a warm sweater
+cold/dry/sunny/windy - wear a pair of mittens
+cold/dry/sunny/windy - put on a heavy coat
+cold/dry/sunny/windy - wear your sunglasses
+cold/dry/sunny/windy - use your windbreaker
+cold/dry/sunny/windy - you need your sunglasses
+dry/cloudy/cold/windy - wear many layers
+calm/cloudy/rainy/warm - you should use your umbrella
+calm/cloudy/rainy/warm - wear shorts today
+calm/cloudy/rainy/warm - take your umbrella
+calm/cloudy/rainy/warm - you must wear your raincoat
+calm/cold/rainy/sunny - you must wear thermal socks
+calm/cold/rainy/sunny - wear waterproof shoes
+calm/cold/rainy/sunny - wear your insulated boots
+calm/cold/rainy/sunny - you need your sunglasses
+calm/cold/rainy/sunny - take an umbrella
+calm/cold/rainy/sunny - you should use your umbrella
+calm/cloudy/dry/warm - wear thin clothes
+calm/cloudy/dry/warm - wear shorts today
+rainy/calm/cold/sunny - wear many layers
+calm/dry/hot/sunny - wear thin clothes
+calm/dry/hot/sunny - remember your hat
+calm/dry/hot/sunny - you must wear your sunglasses
+calm/hot/rainy/sunny - remember your hat
+calm/hot/rainy/sunny - you need your umbrella
+calm/hot/rainy/sunny - you need your sunglasses
+calm/hot/rainy/sunny - take an umbrella
+calm/hot/rainy/sunny - you must wear your sunglasses
+calm/hot/rainy/sunny - wear your sunglasses
+calm/hot/rainy/sunny - remember your umbrella
+calm/rainy/sunny/warm - take an umbrella
+calm/rainy/sunny/warm - wear shorts today
+calm/rainy/sunny/warm - you need your umbrella
+calm/rainy/sunny/warm - wear thin clothes
+calm/rainy/sunny/warm - you need your sunglasses
+cloudy/cold/rainy/windy - wear your scarf
+cloudy/cold/rainy/windy - take your umbrella
+cloudy/cold/rainy/windy - wear a beanie
+cloudy/cold/rainy/windy - wear many layers
+cloudy/cold/rainy/windy - wear your insulated boots
+cloudy/cold/rainy/windy - wear waterproof shoes
+cloudy/cold/rainy/windy - remember your umbrella
+cloudy/cold/rainy/windy - take a long coat today
+cloudy/cold/rainy/windy - take a warm sweater
+cloudy/cold/rainy/windy - wear a heavy coat
+cloudy/cold/rainy/windy - wear your windbreaker
+rainy/sunny/warm/windy - take your umbrella
+rainy/sunny/warm/windy - wear your windbreaker
+rainy/sunny/warm/windy - you need your sunglasses
+rainy/sunny/warm/windy - do not wear many layers
+rainy/sunny/warm/windy - you must wear your sunglasses
+rainy/sunny/warm/windy - put on a thick coat
+calm/cloudy/dry/hot - wear thin clothes
+calm/cloudy/dry/hot - you do not need your sunglasses
+dry/hot/sunny/windy - put on a heavy coat
+dry/hot/sunny/windy - wear thin clothes
+dry/hot/sunny/windy - do not wear many layers
+dry/hot/sunny/windy - wear your windbreaker
+calm/cloudy/cold/rainy - wear your winter socks
+calm/cloudy/cold/rainy - remember your umbrella
+calm/cloudy/cold/rainy - wear waterproof shoes
+calm/cloudy/cold/rainy - you must wear thermal socks
+calm/cloudy/cold/rainy - wear your insulated boots
+calm/cloudy/cold/dry - you must wear thermal socks
+cloudy/cold/dry/windy - put on your boots
+cloudy/cold/dry/windy - take warm shoes
+cloudy/cold/dry/windy - use your windbreaker
+cloudy/cold/dry/windy - wear your scarf
+cloudy/cold/dry/windy - remember the blazer
+cloudy/cold/dry/windy - remember your jacket
+cloudy/hot/rainy/windy - do not take your umbrella
+cloudy/hot/rainy/windy - you do not need your sunglasses
+cloudy/hot/rainy/windy - wear your windbreaker
+cloudy/hot/rainy/windy - you must wear your raincoat
+cloudy/hot/rainy/windy - put on a thick coat
+cloudy/hot/rainy/windy - do not take your raincoat
+cloudy/hot/rainy/windy - wear shorts today
+cloudy/dry/warm/windy - wear shorts today
+cloudy/dry/warm/windy - put on a heavy coat
+cloudy/dry/warm/windy - put on a thick coat
+calm/cloudy/hot/rainy - take your umbrella
+calm/cloudy/hot/rainy - put on light clothes
+calm/cloudy/hot/rainy - do not take your rainboots
+calm/cloudy/hot/rainy - wear waterproof shoes
+calm/cloudy/hot/rainy - do not take your raincoat
+cloudy/dry/hot/windy - you do not need your sunglasses
+cloudy/dry/hot/windy - wear your windbreaker
+cloudy/dry/hot/windy - wear thin clothes
+dry/sunny/warm/windy - you need your sunglasses
+dry/sunny/warm/windy - wear thin clothes
+dry/sunny/warm/windy - put on a heavy coat
+calm/cold/dry/sunny - you must wear your sunglasses
+calm/cold/dry/sunny - take a warm sweater
+calm/dry/sunny/warm - wear your sunglasses
+calm/dry/sunny/warm - wear thin clothes
+cold/rainy/sunny/windy - wear your mittens
+cold/rainy/sunny/windy - wear a beanie
+cold/rainy/sunny/windy - use your windbreaker
+cold/rainy/sunny/windy - you must wear your raincoat
+cold/rainy/sunny/windy - put on a heavy coat
+cold/rainy/sunny/windy - take a warm sweater
+cold/rainy/sunny/windy - take a long coat today
+cold/rainy/sunny/windy - you must wear thermal socks
+cold/rainy/sunny/windy - take your umbrella
+cold/rainy/sunny/windy - wear your sunglasses
+cold/rainy/sunny/windy - wear your thermal socks
+cold/rainy/sunny/windy - wear a pair of mittens
+cloudy/rainy/warm/windy - you must take your umbrella
+cloudy/rainy/warm/windy - do not wear many layers
+cloudy/rainy/warm/windy - put on your raincoat
+cloudy/rainy/warm/windy - remember your umbrella
+cloudy/rainy/warm/windy - wear shorts today
+hot/rainy/sunny/windy - use your windbreaker
+hot/rainy/sunny/windy - put on a thick coat
+hot/rainy/sunny/windy - remember your hat
+hot/rainy/sunny/windy - wear your windbreaker
+hot/rainy/sunny/windy - do not take your rainboots
+hot/rainy/sunny/windy - you need your sunglasses
+hot/rainy/sunny/windy - wear your sunglasses
+hot/rainy/sunny/windy - do not wear many layers
+cold/dry/sunny/windy - put on a thick coat
+cold/dry/sunny/windy - remember your jacket
+cold/dry/sunny/windy - take warm shoes
+cold/dry/sunny/windy - take a long coat today
+cold/dry/sunny/windy - take a raincoat
+cold/dry/sunny/windy - you must wear your sunglasses
+cold/dry/sunny/windy - you must wear thermal socks
+calm/cloudy/rainy/warm - wear waterproof shoes
+calm/cloudy/rainy/warm - you do not need your sunglasses
+calm/cloudy/rainy/warm - wear thin clothes
+calm/cloudy/rainy/warm - take an umbrella
+calm/cold/rainy/sunny - you must wear your raincoat
+calm/cold/rainy/sunny - take a hat
+calm/cold/rainy/sunny - take a warm sweater
+calm/cold/rainy/sunny - wear your sunglasses
+calm/cold/rainy/sunny - remember your umbrella
+calm/cold/rainy/sunny - take your umbrella
+calm/cloudy/dry/warm - you do not need your sunglasses
+calm/dry/hot/sunny - you need your sunglasses
+calm/dry/hot/sunny - do not wear many layers
+calm/dry/hot/sunny - wear shorts today
+calm/hot/rainy/sunny - take a hat
+calm/hot/rainy/sunny - you must take your umbrella
+calm/hot/rainy/sunny - take your umbrella
+calm/hot/rainy/sunny - do not take your rainboots
+calm/hot/rainy/sunny - you should use your umbrella
+calm/hot/rainy/sunny - wear thin clothes
+calm/hot/rainy/sunny - wear thin clothes
+calm/rainy/sunny/warm - wear your sunglasses
+calm/rainy/sunny/warm - you must wear your raincoat
+calm/rainy/sunny/warm - wear waterproof shoes
+calm/rainy/sunny/warm - do not wear many layers
+calm/rainy/sunny/warm - take your umbrella
+cloudy/cold/rainy/windy - remember the blazer
+cloudy/cold/rainy/windy - put on a thick coat
+cloudy/cold/rainy/windy - you must take your umbrella
+cloudy/cold/rainy/windy - remember your jacket
+cloudy/cold/rainy/windy - put on your boots
+cloudy/cold/rainy/windy - put on your raincoat
+cloudy/cold/rainy/windy - you do not need your sunglasses
+cloudy/cold/rainy/windy - wear your winter socks
+cloudy/cold/rainy/windy - use your windbreaker
+cloudy/cold/rainy/windy - take a long raincoat
+cloudy/cold/rainy/windy - you must wear your raincoat

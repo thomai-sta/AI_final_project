@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ai14-report-template.aux
+The style file: plain.bst
+Database file #1: library.bib
+Warning--empty journal in Belz
+Warning--there's a number but no volume in Cahill2006
+Warning--empty journal in ISI
+Warning--empty year in ISI
+Warning--there's a number but no volume in Reiter2009
+Warning--empty journal in Reitera
+Warning--empty year in Reitera
+Warning--there's a number but no volume in KaplanRonaldMWedekind2012
+You've used 12 entries,
+            2118 wiz_defined-function locations,
+            571 strings with 5668 characters,
+and the built_in function-call counts, 3588 in all, are:
+= -- 363
+> -- 124
+< -- 5
++ -- 50
+- -- 38
+* -- 203
+:= -- 587
+add.period$ -- 35
+call.type$ -- 12
+change.case$ -- 55
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 163
+empty$ -- 289
+format.name$ -- 38
+if$ -- 768
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 11
+newline$ -- 61
+num.names$ -- 24
+pop$ -- 69
+preamble$ -- 1
+purify$ -- 43
+quote$ -- 0
+skip$ -- 130
+stack$ -- 0
+substring$ -- 204
+swap$ -- 46
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 8
+while$ -- 39
+width$ -- 14
+write$ -- 123
+(There were 8 warnings)

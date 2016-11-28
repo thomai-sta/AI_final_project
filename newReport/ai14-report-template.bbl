@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{Reitera}
+{\em Building Natural Language Generation Systems}, chapter 2 - National
+  Language Generation in Practice.
+\newblock Cambridge University Press, 2000.
+
+\bibitem{Belz}
+Anja Belz.
+\newblock {Statistical generation: Three methods compared and evaluated}.
+\newblock 2005.
+
+\bibitem{Collins2013}
+Michael Collins.
+\newblock {Probabilistic Context-Free Grammars (PCFGs)}.
+\newblock {\em Lecture Notes}, pages 1--18, 2013.
+
+\bibitem{lexicon}
+Julia Hockenmaier and Mark Steedman.
+\newblock Acquiring compact lexicalized grammars from a cleaner treebank.
+\newblock In {\em Proc. 3rd International Conference on Language Resources and
+  Evaluation}.
+
+\bibitem{Martin}
+James~H Martin and Daniel Jurafsky.
+\newblock {Context-Free Grammars for English}.
+\newblock In {\em An Introduction to Natural Language Processing, Computational
+  Linguistics and Speech Recognition}, chapter~12.
+
+\bibitem{Papineni2001}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu.
+\newblock {BLEU}.
+\newblock In {\em Proceedings of the 40th Annual Meeting on Association for
+  Computational Linguistics - ACL '02}, page 311, Morristown, NJ, USA, 2001.
+  Association for Computational Linguistics.
+
+\bibitem{Reiter2009}
+Ehud Reiter and Anja Belz.
+\newblock {An investigation into the validity of some metrics for automatically
+  evaluating natural language generation systems}.
+\newblock {\em Computational Linguistics}, (December 2008), 2009.
+
+\end{thebibliography}

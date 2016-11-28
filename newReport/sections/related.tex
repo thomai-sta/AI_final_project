@@ -1,0 +1,86 @@
+\section{Related work}
+\label{sec:relwork}
+In this section, certain methods and concepts will be discussed. These methods and concepts, define the basic structure, upon which the application was implemented.
+
+\subsection{Probabilistic Context-Free Grammars (PCFGs)}
+
+\subsubsection{An introduction to Context-Free Grammars (CFGs)} \label{subsec:cfg}
+%A Context-Free Grammar (CFG) is a 4-tuple $G=(N, \Sigma, R, S)$, where:
+%\begin{itemize}
+%\setlength\itemsep{0em}
+%\item N is a set of non-terminal symbols
+%\item $\Sigma$ is a set of terminal symbols
+%\item R is a set of rules of the form $X \rightarrow Y_1Y_2...Y_n$, where $X \in N, n \geq 0$ and $Y_i \in (N \cup \Sigma) \forall n=1,2,...n$
+%\item $S \in N$ is a distinguished start symbol\footnote{The definition of a CFG is borrowed from \cite{Collins2013}}
+%\end{itemize}
+A Context-Free Grammar (CFG) is a set of symbols and rules. The symbols are divided in terminal (i.e. actual words) and non-terminal (i.e. basic syntactic and grammatical categories). A CFG creates sequences of symbols, replacing non-terminal symbols with a combination of non-terminal and terminal symbols, using the rules. The procedure of replacing symbols stops,
+\begin{wrapfigure}{r}{0.3\textwidth}
+\centerline{\includegraphics[scale=0.7]{pictures/SentenceDerivation.pdf}}
+\caption{The parse tree of the sentence ``Take your raincoat''}
+\label{fig:parse_tree}
+\end{wrapfigure}
+when there are no non-terminal symbols left to be replaced. Table \ref{tab:cfg} shows an example of a simplified CFG for the English language. A very specific kind of rule, is the unary rule. A unary rule has only \textit{one} symbol on the right-hand side and this symbol is always a terminal symbol (Table \ref{tab:unary}). The set of the unary rules of a CFG constitutes a lexicon, i.e. a tag for every word in the language (or a subset of the used language), representing what part of speech each word is (part-of-speech tagging, POS tagging).
+
+When producing a sequence of symbols (i.e. a sentence), given a CFG, the set of rules that were used, in order to create the sentence, can be represented as a tree. This tree is called a \textbf{Parse Tree}. Figure \ref{fig:parse_tree} shows the parse tree of the sentence ``Take your raincoat'', based on the CFG example of Table \ref{tab:cfg}.
+
+Because of the fact that there can be different rules with the same non-terminal symbol on the left-hand side, there can be more than one parse trees for one sentence. Additionally, given a sentence there are different methods (parsers) to generate parse trees. More details about different parsers are discussed in Subsection \ref{subsec:parsers}.
+
+\begin{table}
+    \caption{Example CFG}\label{tab:cfg}
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{General CFG rules}
+        \begin{tabular}{|l|}
+			\hline
+			Sentence (S) $\rightarrow$ VerbPhrase NounPhrase \\ \hline
+			VerbPhrase $\rightarrow$ Verb \\
+			VerbPhrase $\rightarrow$ Verb Preposition \\ \hline
+			NounPhrase $\rightarrow$ Pronoun Noun \\ \hline
+		\end{tabular}
+    \end{subtable}%
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{Unary rules}\label{tab:unary}
+		\begin{tabular}{|l|}
+			\hline
+			Verb $\rightarrow$ `take' \\
+			Verb $\rightarrow$ `put' \\ \hline
+			Noun $\rightarrow$ `raincoat' \\
+			Noun $\rightarrow$ `shoes' \\ \hline
+			Pronoun $\rightarrow$ `your' \\ \hline
+			Preposition $\rightarrow$ `on' \\ \hline
+		\end{tabular}
+    \end{subtable} 
+\end{table}
+
+
+
+\subsubsection{Probabilistic Context-Free Grammars (PCFGs)}\label{subsec:pcfg}
+Given a CFG, as defined in Section \ref{subsec:cfg}, a Probabilistic Context-Free Grammar (PCFG), can be defined as an extension of the CFG. Therefore, it consists of the symbols and rules of the CFG and, additionally for every rule, calculates the conditional probability of choosing this rule, given that the left-hand side non-terminal symbol is the non-terminal symbol of the particular rule.
+
+Given a PCFG, one is able to calculate the probability of a whole parse tree, by multiplying the probabilities of all the rules that have been used for the production of the sentence. 
+
+In order to produce a PCFG based on a CFG, one would need to have a corpus, i.e. a set of sentences (symbol sequences) that can be produced by the given CFG. These sentences are converted into parse trees and the occurrences of every rule are counted. In the end the probability of every rule is the number of the rule's occurrences divided by the number of the occurrences of rules with the same non-terminal symbol on the left-hand side:
+\begin{equation*}
+q(\alpha \rightarrow \beta) = \dfrac{\textsl{Count}(\alpha \rightarrow \beta)}{\textsl{Count}(\alpha)}
+\end{equation*}
+
+\subsection{Treebank-Trained Statistical Generator (TTSG)}\label{subsec:ttsg}
+
+The method described in \cite{Belz} uses a CFG and a raw corpus. A raw corpus is nothing more, than a set of sentences written in a natural language (e.g. English). Given that raw corpus and the CFG, the corpus is converted into a Treebank. That means that, for every sentence in the corpus, a parse tree in generated. The set of the different parse trees constitute the Treebank.
+
+Using the generated Treebank, a PCFG is created as described in Section \ref{subsec:pcfg}. Two different generation logics are followed at the last step of this method. The Greedy and the Viterbi methods are used and compared to one another, as well as to the Random Generator (the different generation methods are to be discussed in Section \ref{subsec:generators}).
+
+\input{sections/pars_gen.tex}
+
+\subsection{Evaluation Methods}
+Evaluating NLG systems is not a straightforward task. The quality of text can vary with regard to both the reader and the writer. Since the target user of any NLG system is usually human, a variance in assessment will exist due to the variation in human understanding. Evaluation methods in the current literature can be divided into \textit{Human Rating and Judgement} and \textit{Automated Metrics}.
+
+In the first category humans are asked to rate and judge the text generated by the NLG. However, this type of evaluation is usually quite expensive, time consuming, hard to design and hard to repeat. For these reasons, there has been a growing interest in evaluating NLG systems by comparing them to a reference-text corpus created by human experts using automated metrics such as string-edit distance, tree similarity and BLEU \cite{Papineni2001}. These methods don't require many resources and allow for repetitive immediate evaluation of the system. One concern for the automated metrics, however, is the fact that the reference-text corpora are created by experts according to their criteria, that don't necessarily match the user's criteria.
+
+
+%\subsubsection{Human Rating and Judgement}
+%In this group of methods, humans are asked to rate and judge the text generated by the NLG. This evaluation can be done in several ways. One way is to provide users with text that is written by humans along with that of the NLG system, and asking them to rate both, without knowing which is written by which. Another, is asking them to rate the quality of the text on a five-point scale, or asking them to choose their favourite text.
+
+%\subsubsection{Automatic Metrics}
+%Evaluation methods involving humans are usually quite expensive, time consuming, hard to design and hard to repeat. For these reasons, there has been a growing interest in evaluating NLG systems by comparing them to a reference-text corpus created by human experts using automated metrics such as string-edit distance, tree similarity and BLEU \cite{Papineni2001}. These methods don't require many resources and allow for repetitive immediate evaluation of the system. However, there exist some concerns for using these methods. Among them, is the fact that the reference-text corpora are created by experts according to their criteria, that don't necessarily match the user's criteria.

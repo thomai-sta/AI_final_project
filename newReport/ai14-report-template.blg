@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ai14-report-template.aux
+The style file: plain.bst
+Database file #1: library.bib
+Warning--string name "july" is undefined
+--line 51 of file library.bib
+Warning--to sort, need author, editor, or key in Reitera
+Warning--empty author and editor in Reitera
+Warning--empty journal in Belz
+Warning--empty year in lexicon
+Warning--empty publisher in Martin
+Warning--empty year in Martin
+Warning--there's a number but no volume in Reiter2009
+You've used 7 entries,
+            2118 wiz_defined-function locations,
+            542 strings with 5182 characters,
+and the built_in function-call counts, 1991 in all, are:
+= -- 184
+> -- 77
+< -- 4
++ -- 31
+- -- 24
+* -- 120
+:= -- 325
+add.period$ -- 21
+call.type$ -- 7
+change.case$ -- 32
+chr.to.int$ -- 0
+cite$ -- 14
+duplicate$ -- 102
+empty$ -- 178
+format.name$ -- 24
+if$ -- 428
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 7
+newline$ -- 37
+num.names$ -- 12
+pop$ -- 54
+preamble$ -- 1
+purify$ -- 26
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 60
+swap$ -- 21
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 26
+warning$ -- 7
+while$ -- 16
+width$ -- 8
+write$ -- 74
+(There were 8 warnings)

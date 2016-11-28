@@ -1,0 +1,4 @@
+Mary saw Bob
+Bob saw Mary
+Mary saw a cookie
+Mary saw a cat
